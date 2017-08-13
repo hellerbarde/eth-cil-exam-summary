@@ -392,7 +392,7 @@ Reconstruction Error $\|\mathbf{\red{x}}-\mathbf{\red{\hat{x}}}\|^2 = \sum_{d\no
 
 
 \subsection{Overcomplete Basis}
-$\mathbf{\red{U}} \in \mathbb{R}^{D \times  L}$ and $L > D$. Decoding involved $\rightarrow$ add constraint $\mathbf{\red{z}}^\star \in \arg\min_\mathbf{\red{z}} \lVert \mathbf{\red{z}} \rVert_0$ s.t. $\mathbf{\red{x}} = \mathbf{\red{Uz}}$. NP-hard $\rightarrow$ approximate with 1-norm (convex, $\mathbf{\red{z}}^* = \arg\min_{\mathbf{\red{z}}} \|\mathbf{\red{z}}\|_1\ s.t. \mathbf{\red{x}} = \mathbf{\red{U}}\mathbf{\red{z}} $) or with MP.
+$\mathbf{\red{U}} \in \mathbb{R}^{D \times  L}$ and $L > D$. Decoding involved $\rightarrow$ add constraint $\mathbf{\red{z}}^\star \in \arg\min_\mathbf{\red{z}} \lVert \mathbf{\red{z}} \rVert_0$ s.t. $\mathbf{\red{x}} = \mathbf{\red{Uz}}$. NP-hard (non-convex) $\rightarrow$ approximate with 1-norm (convex, $\mathbf{\red{z}}^* = \arg\min_{\mathbf{\red{z}}} \|\mathbf{\red{z}}\|_1\ s.t. \mathbf{\red{x}} = \mathbf{\red{U}}\mathbf{\red{z}} $) or with MP.
 
 \textbf{Coherence}
 \begin{inparaitem}[\color{red}\textbullet]
