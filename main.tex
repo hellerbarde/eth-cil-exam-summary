@@ -89,7 +89,6 @@
 
 
 \section{Essentials}
-\subsection{Matrix/Vector}
 \begin{compactdesc}
 	\item[Inner Product:] $\langle \mathbf{\red{\red{x}}}, \mathbf{\red{y}} \rangle = \mathbf{\red{x}}^\top \mathbf{\red{y}} = \sum_{i=1}^{N} \mathbf{\red{x}}_i \mathbf{\red{y}}_i$
 	\begin{inparaitem}[\color{red}\textbullet]
@@ -102,10 +101,21 @@
 	\begin{inparaitem}[\color{red}\textbullet]
 		\item $det(\mathbf{\red{A}}) \in +1/-1$
 		\item $det(\mathbf{\red{AA^{T}}}) = 1$
+		\item $\mathbf{\red{U_K U_K^\top U}} = [\mathbf{\red{U_K}};\mathbf{\red{0}}]$
+		\item $\mathbf{\red{U}}: orth. \rightarrow \mathbf{\red{U^\top}} orth.$
+		\item $\|\mathbf{\red{Ux}}\|_2 = \|\mathbf{\red{x}}\|_2$
+		\item $\|\mathbf{\red{A}}\|_2 = \max_{\mathbf{\red{x}}} \|\mathbf{\red{Ax}}\|_2 = \max_{\mathbf{\red{x}}} \|\mathbf{\red{U(DV^\top x)}}\|_2 = \max_{\mathbf{\red{x}}} \|\mathbf{\red{DV^\top x}}\|_2 = \max_{\mathbf{\red{y}}} \|\mathbf{\red{Dy}}\|_2 = \|\mathbf{\red{D}}\|_2$ with $\|\mathbf{\red{x}}\|_2 = 1$ and $\mathbf{\red{y}}=\mathbf{\red{V^\top x}}$
+		\item $\langle \mathbf{\red{\red{u}}}, \mathbf{\red{v}} \rangle = 0$
+	\end{inparaitem}
+	\item[trace:] $\mathrm{tr}(\mathbf{\red{XYZ}}) = \mathrm{tr}(\mathbf{\red{ZXY}})$
+	\begin{inparaitem}[\color{red}\textbullet]
+		\item $\mathrm{tr}(c \mathbf{\red{A}}) = c * \mathrm{tr}(\mathbf{\red{A}})$ 
+		\item $\mathrm{tr}(\mathbf{\red{A}}+\mathbf{\red{B}}) = \mathrm{tr}(\mathbf{\red{A}}) + \mathrm{tr}(\mathbf{\red{B}})$
+		\item $\mathrm{tr}(\mathbf{\red{u_i u_i^\top}}) = 1$
 	\end{inparaitem}
 \end{compactdesc}
 
-$\mathrm{trace}(\mathbf{\red{XYZ}}) = \mathrm{trace}(\mathbf{\red{ZXY}})$
+
 
 \subsection{Norms}
 \begin{inparaitem}[\color{red}\textbullet]
