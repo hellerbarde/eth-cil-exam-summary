@@ -325,6 +325,7 @@ $ \min_{\mathbf{\red{U}}, \mathbf{\red{V}}} J(\mathbf{\red{U}}, \mathbf{\red{V}}
 \end{inparaenum}
 
 \section{Convolutional Neural Networks}
+\textbf{sigmoid}: $s(x) = \frac {1}{1+e^{-x)}}$:$\nabla_x s(x) = s(x)(1-s(x))$
 \textbf{Neurons}: $F_\sigma(\mathbf{\red{x}};\mathbf{\red{w}}) = \sigma(w_0 + \sum_{i=1}^M{x_iw_i})$. \textbf{Output}: linear regression; $\mathbf{\red{y}} = \mathbf{\red{W}}^L\mathbf{\red{x}}^{L-1}$, binary classification; $y_1 = \text{P}[Y=1|\mathbf{\red{x}}] = \frac{1}{1 + \exp[-\langle \mathbf{\red{w}}_1^L,\mathbf{\red{x}}^{L-1}\rangle]}$, multiclass; $y_k = \text{P}[Y=k|\mathbf{\red{x}}]= \frac{\exp[\langle \mathbf{\red{w}}_k^L,\mathbf{\red{x}}^{L-1}\rangle]}{\sum_{m=1}^{K}{\exp[\langle \mathbf{\red{w}}_m^L, \mathbf{\red{x}}^{L-1}\rangle]}}$. \textbf{Loss function} $l(y, \hat{y})$: squared loss; $\frac{1}{2}(y - \hat{y})^2$, cross-entropy loss; $-y \log \hat{y} - (1-y)\log(1-\hat{y})$.
 Convolution: $F_{n,m}(\mathbf{\red{x}};\mathbf{\red{w}}) = \sigma(b + \sum_{k=-2}^2\sum_{l=-2}^{2}{w_{k,l}x_{n+k,m+l}})$.
 \begin{inparaitem}[\color{red}\textbullet]
@@ -446,7 +447,7 @@ Adapt the dictionary to signal characteristics. Objective: $(\mathbf{\red{U}}^\s
 
 \textbf{Matrix Factorization by Iter Greedy Minimization}
 \begin{inparaenum}[\color{red} 1.]
-  \item Coding step: $\mathbf{\red{Z}}^{t+1} \in \argmin_\mathbf{\red{Z}} \| \mathbf{\red{X}} - \mathbf{\red{U}}^t \mathbf{\red{Z}} \|_F^2$ subject to $\mathbf{\red{Z}}$ being sparse
+  \item Coding step(column seperable): $\mathbf{\red{Z}}^{t+1} \in \argmin_\mathbf{\red{Z}} \| \mathbf{\red{X}} - \mathbf{\red{U}}^t \mathbf{\red{Z}} \|_F^2$ subject to $\mathbf{\red{Z}}$ being sparse
   \item Dictionary update step: $\mathbf{\red{U}}^{t+1} \in \argmin_\mathbf{\red{U}} \| \mathbf{\red{X}} - \mathbf{\red{UZ}}^{t+1} \|_F^2$, subject to $\forall l\in [L]:\|\mathbf{\red{u}}_l\|_2 = 1$
 \end{inparaenum}
 
