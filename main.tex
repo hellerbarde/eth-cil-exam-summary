@@ -341,10 +341,10 @@ Convolution: $F_{n,m}(\mathbf{\red{x}};\mathbf{\red{w}}) = \sigma(b + \sum_{k=-2
 	\item $l$ n-channel filters $K^l$
 	\item channel $K^l_c, c\in{[1..n]}$
 	\item pixels $(K^l_c)_{i,j}, -k \leq i,j \leq k$
-	\item input image $(I_c)_{1\leq{c}\leq{n}}$: pixels $(I_c)_{i,j}$
+	\item input image $(I_c)_{1\leq{c}\leq{n}}$: $(I_c)_{i,j}$
 	\item output conv layer $(i',j')$: $(I \star K^l)_{i',j'} = \sum_{1 \leq c \leq n} \sum_{-k \leq i,j \leq k} (I_c)_{i'+i,j'+j} (K_c^l)_{ij}$
 	\item zero padding: $(I_c)_{a,b} = 0$ outside pixel range
-	\item non-linearity $ReLU(x) = max(0,x)$ applied to each pixel
+	\item non-linearity $ReLU(x) = max(0,x)$ applied per pixel
 	\item conv \& ReLU: $ReLU((I \star K^l))_{i',j'}$
 	\item per channel max-pooling (3x3) without stride, image pixel (i,j): $\max_{-1 \leq i',j' \leq 1} (ReLU(I \star K^l))_{i+i',j+j'}$
 \end{inparaitem}
