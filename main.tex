@@ -263,11 +263,11 @@ For GMM let $\red{\boldsymbol{\theta}}_k = (\red{\boldsymbol{\mu}}_k, \red{\bold
 \end{compactenum}
 
 \subsection{Model Order Selection (AIC / BIC for GMM)}
-Trade-off between data fit (i.e. likelihood $p(\mathbf{\red{X}} | \theta)$) and complexity (i.e. \# of free parameters $\kappa(\cdot)$). For choosing $K$:
+Trade-off: data fit (likelihood $p(\mathbf{\red{X}} | \theta)$) vs complexity (\#free parameters $\kappa(\cdot)$). Choosing $K$:
 \begin{inparaitem}[\color{red}\textbullet]
 	\item $\operatorname{AIC}(\theta | \mathbf{\red{X}}) = -\log p_\theta(\mathbf{\red{X}}) + \kappa(\theta)$
 	\item $\operatorname{BIC}(\theta | \mathbf{\red{X}}) = -\log p_\theta(\mathbf{\red{X}}) + \frac{1}{2} \kappa(\theta) \log N$
-	\item Compare AIC/BIC for different $K$ -- the smaller the better. BIC penalizes complexity more.
+	\item AIC vs BIC for dif. $K$: smaller = better. BIC penalizes complexity more.
 \end{inparaitem}
 
 \section{Word Embeddings}
