@@ -113,11 +113,20 @@
 		\item $\mathrm{tr}(\mathbf{\red{A}}+\mathbf{\red{B}}) = \mathrm{tr}(\mathbf{\red{A}}) + \mathrm{tr}(\mathbf{\red{B}})$
 		\item $\mathrm{tr}(\mathbf{\red{u_i u_i^\top}}) = 1$
 	\end{inparaitem}
-	\item[tips:] CoordDesc update $f(\mathbf{\red{x}}) = \frac{1}{2} \|\mathbf{\red{y}}-\mathbf{\red{Ax}}\|^2$: $\nabla_i f(\mathbf{\red{x}}) = \frac{1}{2} \frac{\partial}{\partial \mathbf{\red{x}}_i} \|\mathbf{\red{y}}-\mathbf{\red{Ax}}\|^2 = -2\frac{1}{2}[\frac{\partial}{\partial \mathbf{\red{x}}_i} \mathbf{\red{Ax}}]^\top (\mathbf{\red{y}}-\mathbf{\red{Ax}}) \stackrel{1}{=} \mathbf{\red{A_i}}^\top(\mathbf{\red{Ax}}-\mathbf{\red{y}}) \stackrel{2}{=} \mathbf{\red{A_i}}^\top(\mathbf{\red{A_{i}x_i}} + \sum_{j \neq i}\mathbf{\red{A_{j}x_j}}-\mathbf{\red{y}}) \stackrel{!}{=} 0 \rightarrow \mathbf{\red{x_i}} = \frac {\mathbf{\red{A_i}}^\top(\mathbf{\red{y}}-\sum_{j \neq i}\mathbf{\red{A_{j}x_j}})}{\mathbf{\red{A_i}}^\top \mathbf{\red{A_i}}}$
+	\item[CoordDesc:] $f(\mathbf{\red{x}}) = \frac{1}{2} \|\mathbf{\red{y}}-\mathbf{\red{Ax}}\|^2$: $\nabla_i f(\mathbf{\red{x}}) = \frac{1}{2} \frac{\partial}{\partial \mathbf{\red{x}}_i} \|\mathbf{\red{y}}-\mathbf{\red{Ax}}\|^2 = -2\frac{1}{2}[\frac{\partial}{\partial \mathbf{\red{x}}_i} \mathbf{\red{Ax}}]^\top (\mathbf{\red{y}}-\mathbf{\red{Ax}}) \stackrel{1}{=} \mathbf{\red{A_i}}^\top(\mathbf{\red{Ax}}-\mathbf{\red{y}}) \stackrel{2}{=} \mathbf{\red{A_i}}^\top(\mathbf{\red{A_{i}x_i}} + \sum_{j \neq i}\mathbf{\red{A_{j}x_j}}-\mathbf{\red{y}}) \stackrel{!}{=} 0 \rightarrow \mathbf{\red{x_i}} = \frac {\mathbf{\red{A_i}}^\top(\mathbf{\red{y}}-\sum_{j \neq i}\mathbf{\red{A_{j}x_j}})}{\mathbf{\red{A_i}}^\top \mathbf{\red{A_i}}}$
 	\begin{inparaenum}[\color{red} 1.]
 		\item $\frac{\partial}{\partial \mathbf{\red{x}}_i} \mathbf{\red{Ax}} = \frac{\partial}{\partial \mathbf{\red{x}}_i} \sum_i \mathbf{\red{A_{i}x_i}} = \mathbf{\red{A_i}}$
 		\item $\mathbf{\red{Ax}} = \sum_{j}\mathbf{\red{A_{j}x_j}} = \mathbf{\red{A_{i}x_i}} \sum_{j \neq i} \mathbf{\red{A_{j}x_j}}$
 	\end{inparaenum}
+	\item[EVD:] $\mathbf{\red{Y}} = \mathbf{\red{X}} + \mathbf{\red{uu^\top}}$
+	\begin{inparaitem}[\color{red}\textbullet]
+		\item $\mathbf{\red{X}}$:symm 
+		\item distinct $\lambda_1$ \& $\lambda_2$
+		\item EV $\mathbf{\red{u}}$ \& $\mathbf{\red{v}}$
+		\item $\mathbf{\red{Y}}$ symm: $\mathbf{\red{Y}}^\top = \mathbf{\red{Y}}$
+		\item $\mathbf{\red{u}}$ EV of $\mathbf{\red{Y}}$: $\mathbf{\red{Yu}} = (\mathbf{\red{X}} + \mathbf{\red{uu^\top}})\mathbf{\red{u}} = \mathbf{\red{Xu}} + \mathbf{\red{uu^\top u}} \stackrel{\mathbf{\red{uu^\top}} = 1}{=} \mathbf{\red{Xu}} + \mathbf{\red{u}} \stackrel{\mathbf{\red{Xu}} = \lambda_1 \mathbf{\red{u}}}{=} \lambda_1 \mathbf{\red{u}} + \mathbf{\red{u}} = (\lambda_1 +1)\mathbf{\red{u}}$
+		\item $\mathbf{\red{v}}$ EV of $\mathbf{\red{Y}}$: $\mathbf{\red{Yv}} = (\mathbf{\red{X}} + \mathbf{\red{uu^\top}})\mathbf{\red{v}} = \mathbf{\red{Xv}} + \mathbf{\red{uu^\top v}} \stackrel{\mathbf{\red{u^\top v}}=0}{=} \mathbf{\red{Xv}} = \lambda_2 \mathbf{\red{v}}$
+	\end{inparaitem}
 \end{compactdesc}
 
 
