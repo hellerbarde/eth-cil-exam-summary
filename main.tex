@@ -221,9 +221,9 @@ $\mathbf{\red{X}} \in \mathbb{R}^{D \times N}$. $N$ observations, $K$ properties
 	\item $\mathbf{\red{U}}^\top \mathbf{\red{U}} = I = \mathbf{\red{V}}^\top \mathbf{\red{V}}$
 	\item $\mathbf{\red{U}}$ columns are EVs of $\mathbf{\red{A}} \mathbf{\red{A}}^\top$, $\mathbf{\red{V}}$ columns are EVs of $\mathbf{\red{A}}^\top \mathbf{\red{A}}$, $\sigma = \sqrt{\lambda}$. If $\mathbf{\red{S}} = \mathbf{\red{S}}^\top \Rightarrow \mathbf{\red{S}} = \mathbf{\red{U}}\mathbf{\red{D}}\mathbf{\red{U}}^\top$
 	\item Missing columns in $\mathbf{\red{U}}$ are basis of $\operatorname{null}(A^\top)$ and in $\mathbf{\red{V}}$ are basis of $\operatorname{null}(A)$. 
+	\item $\mathbf{\red{U}}$: users-to-concept, $\mathbf{\red{V}}$: Movies-to-concept, $\mathbf{\red{D}}$: expressiveness of concept
 \end{inparaitem}
 
-$\mathbf{\red{U}}$: users-to-concept affinity, $\mathbf{\red{V}}$: Movies-to-concept simil., $\mathbf{\red{D}}$: expressiveness of each concept
 \subsection{Low-Rank approximation}
 $\tilde{\mathbf{\red{A}}}_{i, j} = \sum_{k=1}^K \mathbf{\red{U}}_{i, k} \mathbf{\red{D}}_{k,k} \mathbf{\red{V}}_{j, k} = \mathbf{\red{U}}_{i, k} \mathbf{\red{D}}_{k,k} (\mathbf{\red{V}}^\top)_{k, j}$.
 \begin{compactdesc}
